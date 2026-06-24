@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CrossCheck AI</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar for input -->
+        <aside class="input-panel">
+            <div class="panel-header">
+                <h2>CrossCheck AI</h2>
+            </div>
+            <div class="panel-body">
+                <textarea id="transcript-input" placeholder="Paste your conversation transcript here...&#10;&#10;Format example:&#10;User: What is the capital of France?&#10;AI: The capital of France is Paris."></textarea>
+                <button id="analyze-btn" class="primary-btn">Analyze Transcript</button>
+                <button id="example-btn" class="secondary-btn">Load Example</button>
+            </div>
+        </aside>
+
+        <!-- Main View for Transcript Display -->
+        <main class="main-panel">
+            <div class="panel-header">
+                <h2>Analysis View</h2>
+                <div class="status-indicator" id="status-indicator">Ready</div>
+            </div>
+            <div class="panel-body" id="transcript-view">
+                <div class="empty-state">
+                    <p>Enter a transcript and click Analyze to see fact-checking results.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Right Panel for Verification/Contradiction Details -->
+        <aside class="details-panel">
+            <div class="panel-header">
+                <h2>Fact Check Results</h2>
+            </div>
+            <div class="panel-body" id="details-view">
+                <div class="empty-state">
+                    <p>Select a highlighted claim to view its verification details.</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
